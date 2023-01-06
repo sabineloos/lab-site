@@ -12,7 +12,7 @@ is_featured: false
 url: "https://purl.stanford.edu/bj915mt6570" # include link to open pdf file
 thumbnail: "img/content-t-radcrowd-report.jpg" # upload square version of the content to img folder and add source here, e.g., "img/content-b-ier-nepal.jpeg"
 title: "The Development and Uses of Crowdsourced Building Damage Information based on Remote-Sensing" # insert title here
-authors: "Sabine Loos, Karen Barns, Gitanjali Bhattacharjee, Rober Soden, Benjamin Herfort, Melanie Eckle, Cristiano Giovando, Blake Girardot, Gregory Deierlein, Anne Kiremidjian, Jack Baker, and David Lallemant" # insert full author list here, to be listed publicly
+authors: "Dr. Sabine Loos, Karen Barns, Gitanjali Bhattacharjee, Rober Soden, Benjamin Herfort, Melanie Eckle, Cristiano Giovando, Blake Girardot, Gregory Deierlein, Anne Kiremidjian, Jack Baker, and David Lallemant" # insert full author list here, to be listed publicly
 publication: "John A. Blume Earthquake Engineering Center Technical Report Series" # insert publication location here (like the journal)
 description: "An overview of the development of using remote sensing for crowdsourcec building damage assessment and an evaluation of the uses of this information." # insert a one sentence description here
 citation: "Loos, S and Barns, K and Bhattacharjee, G and Soden, R and Herfort, B and Eckle, M and Giovando, C and Girardot, B and Deierlein, G and Kiremidjian, A and Baker, J and Lallemant, D. (2018). The Development and Uses of Crowdsourced Building Damage Information based on Remote-Sensing. Blume Earthquake Engineering Center Technical Report 197. Stanford Digital Repository. Available at: https://purl.stanford.edu/bj915mt6570" # add the citation here, in APA format

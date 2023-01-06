@@ -11,7 +11,7 @@ is_featured: false
 url: "https://drive.google.com/file/d/10QQAkBe1oaiMys8Nc0su0LT7vBxpyQWq/view?usp=share_link"
 thumbnail: "img/content-j-gdif-nepal.jpeg"
 title: "G-DIF: A Geospatial Data Integration Framework to Rapidly Estimate Post-Earthquake Damage"
-authors: "Sabine Loos, David Lallemant, Jack Baker, Jamie McCaughey, Nama Budhathoki, Sang-Ho Yun, Feroz Khan, Ritika Singh"
+authors: "Dr. Sabine Loos, David Lallemant, Jack Baker, Jamie McCaughey, Nama Budhathoki, Sang-Ho Yun, Feroz Khan, Ritika Singh"
 publication: "Earthquake Spectra"
 description: "A framework that employs geostatistical methods to combine multiple sources of building damage data into one estimate."
 citation: "Loos, S., Lallemant, D., Baker, J., McCaughey, J., Yun, S.-H., Budhathoki, N., Khan, F., & Singh, R. (2020). G-DIF: A geospatial data integration framework to rapidly estimate post-earthquake damage. Earthquake Spectra, 36(4), 1695–1718. https://doi.org/10.1177/8755293020926190"

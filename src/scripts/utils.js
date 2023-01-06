@@ -30,14 +30,39 @@ let utils = {
         return (
             distance.top >= 0 &&
             distance.left >= 0 &&
-            distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            distance.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
             distance.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     },
-
+    isUpperCase(string) {
+        return /^[A-Z]*$/.test(string);
+    },
+    isEmailValid(email) {
+        return /\S+@\S+\.\S+/.test(email);
+    },
+    slugify(str) {
+        // inverse-ish of getLabel
+        let slug = str.toLowerCase().replaceAll(" ", "-").replaceAll("'", "");
+        slug = slug.replace(/(?:[^\w-.]+|_+)/g, " ");
+        return slug;
+    },
+    getLabel(value) {
+        // inverse-ish of slugify
+        return value
+            .split("-")
+            .map(str => {
+                return str.charAt(0).toUpperCase() + str.slice(1);
+            })
+            .join(" ");
+    },
 
     filters: {
         getReadingTime: string => utils.getReadingTime(string),
+        slugify: string => utils.slugify(string),
+        isUpperCase: string => utils.isUpperCase(string),
+        isEmailValid: string => utils.isEmailValid(string),
+        getLabel: string => utils.getLabel(string),
     },
 };
 

@@ -11,7 +11,7 @@ is_featured: false
 url: "https://drive.google.com/file/d/16Q01aXhOyfTMlF3jYCcOM4e97AnhXF9f/view?usp=share_link"
 thumbnail: "img/content-j-gdif-efficacy.jpg"
 title: "Efficacy of Damage Data Integration: A Comparative Analysis of Four Major Earthquakes"
-authors: "Sabine Loos, Jennifer Levitt, Kei Tomozawa, Jack Baker, David Lallemant"
+authors: "Dr. Sabine Loos, Jennifer Levitt, Kei Tomozawa, Jack Baker, David Lallemant"
 publication: "Natural Hazards Review"
 description: "Evaluating how effective data integration for damage estimation with different data sources across different contexts."
 citation: "Loos, S., Levitt, J., Tomozawa, K., Baker, J., & Lallemant, D. (2022). Efficacy of Damage Data Integration: A Comparative Analysis of Four Major Earthquakes. Natural Hazards Review, 23(4), 04022026. https://doi.org/10.1061/(ASCE)NH.1527-6996.0000581"

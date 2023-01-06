@@ -19,7 +19,7 @@ const store = createStore({
                 url: "disasterdata.engin.umich.edu",
                 image: `https://disasterdata.engin.umich.edu/images/metas/og-image-aidd-default.png`,
                 twitterImage: ``,
-                keywords: `university of michigan, aidd labs, sabine loos, dr. sabine loos, civil, environmental, engineering, disaster, relief, data, data visualization`,
+                keywords: `university of michigan, aidd labs, Dr. Sabine Loos, Dr. Sabine Loos, civil, environmental, engineering, disaster, relief, data, data visualization`,
                 twitterUrl: 'https://twitter.com/sab_loos',
                 githubUrl: 'https://github.com/sabineloos',
                 researchGateUrl: 'https://www.researchgate.net/profile/Sabine-Loos',

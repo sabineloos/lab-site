@@ -191,7 +191,6 @@
         </div>
         <div class="post-right">
             <div class="right-fixed">
-                <GayAgenda class="promote" />
                 <div class="author-metas">
                     <div class="bio-image-wrapper" @click="scrollToTop($event)">
                         <div class="scroll-note">Scroll up ^</div>

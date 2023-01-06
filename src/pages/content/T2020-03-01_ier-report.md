@@ -12,7 +12,7 @@ url: "https://dr.ntu.edu.sg/handle/10356/137836"
 thumbnail: "img/content-t-ier-report.png"
 title: "Informatics for equitable recovery : supporting equitable disaster recovery through mapping and integration of social vulnerability into post-disaster impact assessments
 "
-authors: "David Lallemant, Sabine Loos, Jamie McCaughey, Nama Budhathoki, Feroz Khan"
+authors: "David Lallemant, Dr. Sabine Loos, Jamie McCaughey, Nama Budhathoki, Feroz Khan"
 publication: "World Bank"
 description: "An overview of the project for supporting equitable recovery through impact assessments."
 citation: "Lallemant, D., Loos, S., McCaughey, J. W., Budhathoki, N., & Khan, F. (2020). Informatics for Equitable Recovery: Supporting equitable disaster recovery through mapping and integration of social vulnerability into post-disaster impact assessments (pp. 1–51) [Report]. Nanyang Technological University. https://doi.org/10.32656/ier_final_report_2020
