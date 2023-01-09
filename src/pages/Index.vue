@@ -1,27 +1,25 @@
 <script>
     import {mapState} from "vuex";
-    import Work from "@/components/Work.vue";
     import LightBox from "@/components/global/Lightbox.vue";
 
     export default {
         name: "Index",
         components: {
-            Work,
             LightBox,
         },
         data() {
             return {
                 isLoaded: false,
-                aboutState: 'mission',
+                aboutState: "mission",
                 lightbox: {
                     images: {
-                    thumbnails: ["home-approach.jpg"],
-                    large: ["home-approach.jpg"]
+                        thumbnails: ["home-approach.jpg"],
+                        large: ["home-approach.jpg"],
+                    },
+                    captions: ["The AIDD labs approach"],
+                    thumbnailsPath: "/img/",
+                    largePath: "/img/",
                 },
-                captions: ["The AIDD labs approach"],
-                thumbnailsPath: "/img/",
-                largePath: "/img/"
-                }
             };
         },
         computed: {
@@ -29,7 +27,7 @@
                 recentPosts: state => [...state.posts.slice(0, 3)],
                 siteMetadata: state => state.siteMetadata,
             }),
-            aboutContent () {
+            aboutContent() {
                 const aboutContentHash = {
                     mission: `
                         <p> The AIDD (Actionable Information for Disasters and Development) labs’ mission is to leverage data and information to prioritize populations in need before, during, and after disasters. 
@@ -57,14 +55,14 @@
                             We then develop approaches to address these needs by leveraging statistical learning, crowdsourcing, remote sensing, among other techniques. 
                             Importantly, we consider the implications of the information we design through evaluating the effects of data-driven decisions and continued engagement with our users. </p>
                         <p> Our general approach to our research integrates the many disciplines needed to develop more holistic disaster information, blending engineering, the earth sciences, the social sciences, and information systems. 
-                            We also include the opinions of users as much as possible to improve our data development, especially those who have historically been excluded from disaster data development and decision making.</p>`
-                }
-                return aboutContentHash[this.aboutState]
-            }
+                            We also include the opinions of users as much as possible to improve our data development, especially those who have historically been excluded from disaster data development and decision making.</p>`,
+                };
+                return aboutContentHash[this.aboutState];
+            },
         },
 
         methods: {
-            handleClick (e) {
+            handleClick(e) {
                 this.aboutState = e.target.value;
             },
         },
@@ -75,229 +73,319 @@
 </script>
 
 <template>
-    <SEO />
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                Designing disaster and development information for <em>action</em>.
-            </h1>
-        </div>
-    </section>
-        <MaxWidth class="grid-container" size = "xl">
-        <div class="main">
-            <h1>ABOUT</h1>
-            <div class="about">
-                <div class="about-text">
-                    <div v-html="aboutContent"></div>
-                <div class="btn-toolbar" role="toolbar">
-                    <button @click="handleClick" value="mission" :class="{ primary: aboutState === 'mission' }">Our Mission</button>
-                    <button @click="handleClick" value="research" :class="{ primary: aboutState === 'research' }">Our Research</button>
-                    <button @click="handleClick" value="approach" :class="{ primary: aboutState === 'approach' }">Our Approach</button>
+    <SEO meta-title="Actionable Information for Disasters and Development Labs" />
+    <div class="index-page">
+        <section class="hero">
+            <MaxWidth size="m" class="hero-content">
+                <h1 class="hero-title">
+                    Designing disaster and development information for <em>action</em>.
+                </h1>
+            </MaxWidth>
+        </section>
+        <MaxWidth class="grid-container" size="m">
+            <div class="main">
+                <h1>ABOUT</h1>
+                <div class="about">
+                    <div class="about-text">
+                        <div v-html="aboutContent"></div>
+                        <div class="btn-toolbar" role="toolbar">
+                            <button
+                                @click="handleClick"
+                                value="mission"
+                                :class="{primary: aboutState === 'mission'}"
+                            >
+                                Our Mission
+                            </button>
+                            <button
+                                @click="handleClick"
+                                value="research"
+                                :class="{primary: aboutState === 'research'}"
+                            >
+                                Our Research
+                            </button>
+                            <button
+                                @click="handleClick"
+                                value="approach"
+                                :class="{primary: aboutState === 'approach'}"
+                            >
+                                Our Approach
+                            </button>
+                        </div>
+                    </div>
+                    <div class="about-img">
+                        <!-- <img src="/img/home-approach.png" alt="AIDD labs approach diagram showing flows from users to decisions to data"> -->
+                        <LightBox
+                            :thumbnails="lightbox.images.thumbnails"
+                            :largeImages="lightbox.images.large"
+                            :thumbnailsPath="lightbox.thumbnailsPath"
+                            :largePath="lightbox.largePath"
+                            :captions="lightbox.captions"
+                            class="lightBox"
+                        />
+                    </div>
                 </div>
+                <h1>Partners & Funders</h1>
+                <div class="partners">
+                    <div class="partners__photo-banner">
+                        <a
+                            class="first"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://earthquake.usgs.gov/"
+                            ><img src="/img/partner-usgs.png"
+                        /></a>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://hazards.colorado.edu/"
+                            ><img src="/img/partner-nhc.png"
+                        /></a>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.data4sdgs.org/"
+                            ><img src="/img/partner-GPSDD.jpg"
+                        /></a>
+                        <a href="#"><img src="/img/partner-tfscb.png" /></a>
+                        <a href="#"><img src="/img/partner-WBibrd.png" /></a>
+                        <a href="#"><img src="/img/partner-kwpf.png" /></a>
+                        <a href="#"><img src="/img/partner-UKaid.jpg" /></a>
+                        <a href="#"><img src="/img/partner-irishAid.png" /></a>
+                        <!-- Below is the width of 1400 px -->
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://earthquake.usgs.gov/"
+                            ><img src="/img/partner-usgs.png"
+                        /></a>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://hazards.colorado.edu/"
+                            ><img src="/img/partner-nhc.png"
+                        /></a>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.data4sdgs.org/"
+                            ><img src="/img/partner-GPSDD.jpg"
+                        /></a>
+                        <a href="#"><img src="/img/partner-tfscb.png" /></a>
+                        <a href="#"><img src="/img/partner-WBibrd.png" /></a>
+                    </div>
                 </div>
-                <div class="about-img">
-                    <!-- <img src="/img/home-approach.png" alt="AIDD labs approach diagram showing flows from users to decisions to data"> -->
-                    <LightBox
-                        :thumbnails="lightbox.images.thumbnails"
-                        :largeImages="lightbox.images.large"
-                        :thumbnailsPath="lightbox.thumbnailsPath"
-                        :largePath="lightbox.largePath"
-                        :captions="lightbox.captions"
-                        class="lightBox"
-                    />
-                </div>
-            </div>
-            <h1>Partners & Funders</h1>
-            <div class="partners">
-                <div class="partners__photo-banner">
-                    <a class="first" target="_blank" rel="noopener noreferrer" href="https://earthquake.usgs.gov/"><img src="/img/partner-usgs.png" /></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://hazards.colorado.edu/"><img src="/img/partner-nhc.png" /></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.data4sdgs.org/"><img src="/img/partner-GPSDD.jpg" /></a>
-                    <a href="#"><img src="/img/partner-tfscb.png" /></a>
-                    <a href="#"><img src="/img/partner-WBibrd.png" /></a>
-                    <a href="#"><img src="/img/partner-kwpf.png" /></a>
-                    <a href="#"><img src="/img/partner-UKaid.jpg" /></a>
-                    <a href="#"><img src="/img/partner-irishAid.png" /></a>
-                    <!-- Below is the width of 1400 px -->
-                    <a target="_blank" rel="noopener noreferrer" href="https://earthquake.usgs.gov/"><img src="/img/partner-usgs.png" /></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://hazards.colorado.edu/"><img src="/img/partner-nhc.png" /></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.data4sdgs.org/"><img src="/img/partner-GPSDD.jpg" /></a>
-                    <a href="#"><img src="/img/partner-tfscb.png" /></a>
-                    <a href="#"><img src="/img/partner-WBibrd.png" /></a>
-                </div>
-            </div>
-            <!-- <div class="FeedItem">
+                <!-- <div class="FeedItem">
                 <div class="FeedItem__image" src="/img/partner-tfscb.png"></div>
             </div> -->
-        </div>
-    </MaxWidth>
+            </div>
+        </MaxWidth>
+    </div>
 </template>
 
-<style lang="scss" >
+<style lang="scss">
     @import "./../styles/globals";
-    body, html {
-    height: 100%;
-}
-// HERO STUFF
-    .hero{
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .hero::before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url("/img/home-hero-1.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        filter: brightness(80%);
-    }
-    .hero-content{
-        position: absolute;
-        color: white;
-        text-align: left;
-        width: 50vw; // 10% of the width
-        left: 10%;
-        top: 60%;
-        // transform: translate(0%, -50%);
-    }
-    .hero-title{
-        font-family: 'DM Sans';
-        font-size: 3rem;
-        font-weight: 300;
-        margin-bottom: 0;
-    }
-// buttons
-.show {
-  display: block;
-}
 
-// BODY
-.grid-container {
-        display: flex;
-        justify-content: center;
-        padding: 20px 10px 50px 10px;
-        height: auto;
-        overflow: hidden;
-    }
-    .main{
-        width: 75%;
-        display: flex;
-        flex-direction: column;
-    }
-    .about{ 
-        display: flex;
-        margin: 10px;
-    }
-    .about-text{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end; // keep things aligned to the bottom so the bottoms don't jump around
-    }
-
-    .about-img{ grid-area: about-img;
-        display: block;
-        width: 50%;
-        height: auto;
-        justify-content: center;
-        padding-left: 1rem;
-    }
-    .light-box {
-        &__thumbnail {
-        margin: 10px;
-        width: 100%;
+    .index-page {
+        body,
+        html {
+            height: 100%;
         }
-        & img {
-        max-width: 100%;
-        }
-    }
+        // HERO STUFF
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 95vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-    .partners {
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        // https://stackoverflow.com/questions/52134961/first-img-of-bannermover-does-not-follow-directly-after-last-img-of-bannermove
-        &__photo-banner {
-            height: 75px;
-            margin-top: 10px;
-            // width: 100%;
-            width: 1425px;
-            & img {
-            display: inline-block;
-            height: 75px;
-            // height: auto;
-            padding-right: 50px;
-            width: auto;
-            // width: 250px;
+            transform: translateY(-$nav-height);
+
+            @media (max-width: 600px) {
+                height: 400px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("/img/home-hero-1.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                filter: brightness(80%);
+            }
+
+            .hero-content {
+                //position: absolute;
+                position: relative;
+                z-index: 300;
+                color: white;
+                text-align: left;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                padding-bottom: 6em;
+
+                @media (max-width: 600px) {
+                    position: inherit;
+                    display: flex;
+                    height: 100%;
+                    bottom: unset;
+                    left: unset;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                .hero-title {
+                    font-family: "DM Sans", sans-serif;
+                    font-size: 3rem;
+                    font-weight: 300;
+                    margin-bottom: 0;
+                    max-width: 880px;
+                    margin-right: auto;
+                    margin-left: 0;
+                    margin-top: auto;
+
+                    @media (max-width: 600px) {
+                        font-size: 2em;
+                    }
+                }
             }
         }
-        &__photo-banner {
-            & img {
-                transition: all 0.5s ease;
+
+        // buttons
+        .show {
+            display: block;
+        }
+
+        // BODY
+        .grid-container {
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 6em;
+        }
+
+        .about {
+            display: flex;
+            gap: 1em;
+
+            @media (max-width: 700px) {
+                flex-direction: column;
+                gap: 2em;
             }
         }
-        & .first {
-	        animation: bannermove 50s linear infinite;
-        }
-    }
 
-// KEY FRAME ANIMATIONS
-    
-    // }
-    @keyframes bannermove {
-        0% {margin-left: 0%;}
-        100% {
-            // margin-left: -200%;
-            margin-left: -1795px; //we did this by trial and error lol
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; // keep things aligned to the bottom so the bottoms don't jump around
         }
-        
-    }
-    .news{
-        display: flex;
-        flex-direction:row;
-        margin: 10px;
-    }
-    .news-featured{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-    }
-    .news-latest{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-    }
-    .img-fullwidth{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 70%;
+
+        .about-img {
+            display: block;
+            justify-content: center;
+            padding-left: 1rem;
         }
-    .ul.partnerlogos {
-        margin: 0;
-        padding: 0;
-        white-space: nowrap;
-        width: 1000px;
-        overflow-x: auto;
-        background-color: transparent;
-    }
-    .ul.partnerlogos li{
-        display: inline;
-        width: 150px;
-        height: 150px;
-    }
-    .index {
+
+        .light-box {
+            &__thumbnail {
+                margin: 10px;
+                width: 100%;
+            }
+            & img {
+                max-width: 100%;
+            }
+        }
+
+        .partners {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 2em 0;
+            // https://stackoverflow.com/questions/52134961/first-img-of-bannermover-does-not-follow-directly-after-last-img-of-bannermove
+
+            &__photo-banner {
+                height: 75px;
+                margin-top: 10px;
+                // width: 100%;
+                width: 1425px;
+
+                & img {
+                    display: inline-block;
+                    height: 75px;
+                    // height: auto;
+                    padding-right: 50px;
+                    width: auto;
+                    // width: 250px;
+                }
+            }
+            &__photo-banner {
+                & img {
+                    transition: all 0.5s ease;
+                }
+            }
+            & .first {
+                animation: bannermove 50s linear infinite;
+            }
+        }
+
+        // KEY FRAME ANIMATIONS
+
+        // }
+        @keyframes bannermove {
+            0% {
+                margin-left: 0%;
+            }
+            100% {
+                // margin-left: -200%;
+                margin-left: -1795px; //we did this by trial and error lol
+            }
+        }
+        .news {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+        }
+        .news-featured {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+        .news-latest {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .img-fullwidth {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 70%;
+        }
+        .ul.partnerlogos {
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+            width: 1000px;
+            overflow-x: auto;
+            background-color: transparent;
+        }
+        .ul.partnerlogos li {
+            display: inline;
+            width: 150px;
+            height: 150px;
+        }
+
         &__label {
             text-align: center;
 

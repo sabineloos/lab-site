@@ -1,4 +1,5 @@
 :root {
+    // 900 dark -> 100 light tints
     --grey-900: #111010;
     --grey-800: #3d3f42;
     --grey-700: #7d7f81;
@@ -9,36 +10,29 @@
     --grey-200: #f2f2f2;
     --grey-100: #f9f9fa;
 
-    --neon-green-500: #00e100;
+    --blue-900: #1C264B;
+    --blue-800: #122879;
+    --blue-700: #213c9c;
+    --blue-600: #3857c2;
+    --blue-500: #5f7bde;
+    --blue-400: #768ee0;
+    --blue-300: #8499e1;
+    --blue-200: #a8b9f1;
 
-    --neon-pink-500: #ff00db;
-    --neon-pink-100: #ffe5fb;
+    --green-500: #6bebac;
+    --green-200: #d6ea5a;
 
-    // brands
-    --aclu-blue-lightest: #d5f2f7;
-    --aclu-blue-light: #A3DAE2;
-    --aclu-blue: #175FAF;
-    --aclu-blue-dark: #130F54;
+    --orange-500: #ee9f74;
+    --orange-200: #facca1;
 
-    // theme colors
-    --blue-500: #1C264B;
-    --blue-400: #4B80F3;
-    --blue-300: #B1EEF9;
-    --neon-green-300: #E5FD83;
-    --bright-yellow-300: #F7FA65;
-    --pink-500: #D866CD;
-    --orange-300: #EE9F74;
-    --purple-300: #BA84D0;
-    --purple-blue-300: #768EE0;
-    --purple-blue-400: #5B6DAA;
-    --yellow-300: #F2E59C#
+    --yellow-500: #f8fa73;
+
 }
 
 [theme="light"],
 :root {
-    --background-color: #FFF9EE;
-    --text-base-color: black;
-
+    --background-color: #fff9ee;
+    --text-base-color: var(--grey-900);
     --border-500: #e9eaea;
 
     --accent-01: blue-500;
@@ -52,7 +46,7 @@
     --background-color: #21252b;
     --text-base-color: #b6b6b6;
 
-    --accent-01: #D866CD;
+    --accent-01: #d866cd;
 
     --name-title-background: white;
     --name-title-background--hover: white;

@@ -44,7 +44,7 @@
         :target="doOpenInNewTab ? '_blank' : ''"
         :rel="doOpenInNewTab ? 'noreferrer noopener' : ''"
     >
-        <Button v-if=isButton>
+        <Button v-if=isButton size="m">
             <slot />
         </Button>
         <slot v-else/>
@@ -57,10 +57,6 @@
             text-decoration: none;
         }
 
-        &--no-decoration {
-            text-decoration: none;
-        }
-
         &:hover {
             cursor: pointer;
         }
@@ -69,6 +65,10 @@
             text-decoration: underline;
             text-underline-offset: 2px;
             text-decoration-thickness: 2px;
+        }
+
+        &--no-decoration {
+            text-decoration: none;
         }
     }
 </style>

@@ -13,7 +13,8 @@ body,
 body {
     width: 100%;
     margin: 0 auto;
-    font-family: 'DM Sans';
+    font-family: "DM Sans", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 16px;
     line-height: 1.4;
     -webkit-font-smoothing: antialiased;
@@ -22,7 +23,7 @@ body {
         box-sizing: border-box;
 
         &::selection {
-            background: var(--neon-green-300);
+            background: var(--orange-200);
         }
     }
 }
@@ -39,17 +40,8 @@ a {
     position: relative;
 }
 
-a:hover {
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-underline-offset: 2px;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--blue-300);
-    font-weight: 500;
-    color: currentColor;
-}
-
-a.nav { // make this specific for the nav somehow
+a.nav {
+    // make this specific for the nav somehow
     font-weight: 400;
     text-decoration: none;
 }
@@ -68,26 +60,40 @@ a.footer {
     text-decoration: none;
 }
 
-a.footer:hover{
+a.footer:hover {
     font-weight: 1000;
 }
 
+img {
+    width: 100%;
+}
+
 h1 {
-    font-family: 'Prata';
+    font-family: "Prata", serif;
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 1.3;
     margin: 1em 0 0.5em 0;
 }
 
 h2 {
-    font-family: 'Prata';
+    font-family: "Prata", serif;
     font-weight: 500;
-    margin: 1em 0 0 0;
+    margin: 0.5em 0;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.095em;
 }
 
 h3 {
+}
+
+h6 {
     line-height: 1;
-    font-family: 'DM Sans';
+    font-family: "DM Sans", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    padding: 0 1.5rem;
+    font-size: 0.65em;
+    opacity: 0.65;
     font-weight: 700;
     margin: 1em 0 0 0;
 }
@@ -97,7 +103,7 @@ ul {
 }
 
 span.arrow {
-    font-family: 'DM sans', sans-serif;
+    font-family: "DM sans", sans-serif;
 }
 
 .p-style {
@@ -112,21 +118,21 @@ button {
     text-align: center;
     color: black;
     background-color: transparent;
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-weight: 500;
     cursor: pointer;
-    
+
     p {
         margin: 0;
     }
 }
 
-button:hover{
+button:hover {
     border-radius: 2px;
     background-color: var(--blue-400);
     color: white;
 }
-button:active{
+button:active {
     background-color: var(--blue-400);
 }
 
@@ -136,7 +142,7 @@ button.primary {
     text-align: center;
     background-color: var(--blue-400);
     color: white;
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-weight: 500;
     border-radius: 2px;
     border: none;
@@ -153,7 +159,7 @@ button.footer {
     text-align: center;
     background-color: var(--bright-yellow-300);
     color: black;
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
     font-weight: 500;
     border-radius: 2px;
     border: none;
@@ -167,6 +173,14 @@ img {
 }
 
 .font-vulf {
-    font-family: 'Vulf Mono', serif;
+    font-family: "Vulf Mono", serif;
     font-weight: 500;
+}
+
+.wavy {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--neon-green-300);
 }

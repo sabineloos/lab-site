@@ -1,23 +1,25 @@
 <script>
+    import {mapState} from "vuex";
     export default {
-        name: "Content",
+        name: "Events",
         components: {},
+        props: {},
+        emits: [],
         data() {
             return {};
         },
-        computed: {},
-
+        computed: {
+            ...mapState({}),
+        },
         methods: {},
         mounted() {},
     };
 </script>
 <template>
-    <MaxWidth size="s">
-        <div>
-            This site
-        </div>
-        <div>
-            Marg
-        </div>
-    </MaxWidth>
+    <MaxWidth class="events"> Events </MaxWidth>
 </template>
+<style lang="scss">
+    .events {
+       
+    }
+</style>

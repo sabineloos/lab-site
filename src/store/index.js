@@ -5,11 +5,13 @@ const store = createStore({
         return {
             posts: [],
             postsById: {},
-            members: [],
-            membersById: {},
+            members: {},
             contents: [],
             infoDensity: "low",
-            themeColor: typeof window !== 'undefined' && localStorage.getItem("sb____") ? JSON.parse(localStorage.getItem("sb____"))["theme"] : "light",
+            themeColor:
+                typeof window !== "undefined" && localStorage.getItem("sb____")
+                    ? JSON.parse(localStorage.getItem("sb____"))["theme"]
+                    : "light",
             localStorageKey: "sb____",
             siteMetadata: {
                 title: `AIDD Labs`,
@@ -19,12 +21,13 @@ const store = createStore({
                 url: "disasterdata.engin.umich.edu",
                 image: `https://disasterdata.engin.umich.edu/images/metas/og-image-aidd-default.png`,
                 twitterImage: ``,
-                keywords: `university of michigan, aidd labs, sabine loos, dr. sabine loos, civil, environmental, engineering, disaster, relief, data, data visualization`,
-                twitterUrl: 'https://twitter.com/sab_loos',
-                githubUrl: 'https://github.com/sabineloos',
-                researchGateUrl: 'https://www.researchgate.net/profile/Sabine-Loos',
-                googleScholarUrl: 'https://scholar.google.com/citations?user=WEt_N8AAAAAJ&hl=en',
-                michCivilUrl: 'https://cee.engin.umich.edu'
+                keywords: `university of michigan, aidd labs, Dr. Sabine Loos, Dr. Sabine Loos, civil, environmental, engineering, disaster, relief, data, data visualization`,
+                twitterUrl: "https://twitter.com/sab_loos",
+                githubUrl: "https://github.com/sabineloos",
+                researchGateUrl: "https://www.researchgate.net/profile/Sabine-Loos",
+                googleScholarUrl:
+                    "https://scholar.google.com/citations?user=WEt_N8AAAAAJ&hl=en",
+                michCivilUrl: "https://cee.engin.umich.edu",
             },
         };
     },
@@ -40,22 +43,15 @@ const store = createStore({
 
             let postsById = {};
             sortedPosts.forEach(post => {
-                postsById[post.id] = post
-            })
+                postsById[post.id] = post;
+            });
 
             state.posts = sortedPosts;
-            state.postsById = postsById
+            state.postsById = postsById;
         },
 
         loadMembers(state, {members}) {
-            let membersById = {};
-
-            members.forEach(member => {
-                membersById[member.id] = member
-            });
-
-            state.members = [...members];
-            state.membersById = membersById
+            state.members = members;
         },
 
         loadContents(state, {contents}) {
@@ -79,7 +75,7 @@ const store = createStore({
         },
         setMode(state, mode) {
             state.mode = mode;
-        }
+        },
     },
 
     actions: {
@@ -91,7 +87,7 @@ const store = createStore({
 
         loadMembers({commit}, members) {
             commit("loadMembers", {
-                members: members
+                members: members,
             });
         },
 
@@ -109,7 +105,7 @@ const store = createStore({
         },
 
         setMode({commit}, mode) {
-            commit("setMode", mode)
+            commit("setMode", mode);
         },
     },
 });

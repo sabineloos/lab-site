@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import Index from "@/pages/Index.vue";
 import Contact from "@/pages/Contact.vue";
 import Posts from "@/pages/Posts.vue";
-import Work from "@/pages/Work.vue";
 
 let appRoutes = [
     {

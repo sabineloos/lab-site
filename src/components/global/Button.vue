@@ -40,12 +40,15 @@
         text-align: center;
         -webkit-appearance: none;
         -moz-appearance: none;
+        border-radius: 2px;
 
         font-weight: 600;
-        background: var(--neon-green-300);
+        background: var(--yellow-500);
+        border: 1px solid var(--blue-900);
 
         &:hover {
-            background: lightgrey;
+            background: #3a58c4;
+            color: white;
         }
 
         &.no-style {
@@ -57,20 +60,33 @@
 
         &.size {
             &-xxs {
+                padding: 0;
+                font-size: 0.85em;
             }
             &-xs {
+                padding: 0.3em 0.5em;
+                font-size: 0.85em;
             }
             &-s {
                 padding: 0.1em 0.35em;
+                font-size: 1em;
             }
+
             &-m {
-                padding: 0.3em 0.5em;
+                padding: 0.45em 0.85em;
+                font-size: 1em;
             }
             &-l {
+                padding: 0.3em 0.5em;
+                font-size: 1.15em;
             }
             &-xl {
+                padding: 0.3em 0.5em;
+                font-size: 1.25em;
             }
             &-xxl {
+                padding: 0.3em 0.5em;
+                font-size: 1.5em;
             }
         }
     }

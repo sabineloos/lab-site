@@ -45,10 +45,12 @@
 
             &-s {
                 max-width: 1000px;
+                
             }
 
             &-m {
                 max-width: $max-width-m;
+              
             }
 
             &-l {
@@ -56,6 +58,11 @@
                 max-width: 100%;
                 padding-left: 1.5rem;
                 padding-right: 1.5rem;
+
+                @media(max-width: 600px) {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
             }
 
             &-xl {
