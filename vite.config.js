@@ -51,7 +51,7 @@ export default defineConfig({
         Markdown({
             // default options passed to markdown-it
             // see: https://markdown-it.github.io/markdown-it/
-            wrapperComponent: "Post",
+            wrapperComponent: "MarkdownContainer",
             markdownItOptions: {
                 html: true,
                 linkify: true,
@@ -76,6 +76,8 @@ export default defineConfig({
                     // the Pages plugin will create routes for us based on file structure when we build this into the static site. 
                     // We want to keep this flow, keep our organization, but edit the routes to have a nicer looking url structure in the final site.
                     // Existing file structure: /pages/content/2018-19-11_ier-nepal 
+
+                    console.table(route.component)
 
                     let newRoute = route.path.split("_")[1];
                     //ier-nepal

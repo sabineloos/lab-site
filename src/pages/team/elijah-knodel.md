@@ -1,10 +1,10 @@
 ---
-slug: "marisa-macias"
-name: "Marísa Macías"
-title: "Masters researcher"
+slug: "elijah-knodel"
+name: "Elijah Knodel"
+title: "Undergraduate Researcher"
 affiliation: "Colorado School of Mines & USGS"
-img: "img/member-marisa.jpeg"
-url: "https://www.usgs.gov/staff-profiles/marisa-macias"
+img: "img/member-elijah.png"
+component: "Member"
 ---
 
 Beep boop banana pants.

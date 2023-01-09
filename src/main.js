@@ -7,6 +7,7 @@ import routes from "~pages";
 import store from "./store/";
 import utils from "./scripts/utils.js";
 import Post from "@/pages/Post.vue";
+import Member from "@/pages/Member.vue";
 
 export const createApp = ViteSSG(
     // the root component
@@ -16,6 +17,7 @@ export const createApp = ViteSSG(
     // function to have custom setups
     ({app, router, routes, isClient, initialState}) => {
         app.component("Post", Post);
+        app.component("Member", Member);
         app.mixin({
             methods: utils.filters,
         });
@@ -39,7 +41,7 @@ export const createApp = ViteSSG(
 
 
         let members = {};
-        let markdownMembers = import.meta.globEager("./pages/members/**/*.md");
+        let markdownMembers = import.meta.globEager("./pages/team/**/*.md");
         for (const member in markdownMembers) {
             let componentConfig = markdownMembers[member];
 

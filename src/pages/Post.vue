@@ -8,10 +8,16 @@
     export default {
         name: "Post",
         components: {},
+        props: {
+            frontmatter: {
+                type: Object,
+                required: true
+            }
+        },
         data() {
             return {
-                ...this.$attrs.frontmatter,
-
+                ...this.frontmatter,
+                
                 isLoaded: false,
 
                 breakpointWatcher: "",
